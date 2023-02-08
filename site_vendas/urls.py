@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('usuarios.urls')),
     path('produtos/', include('produtos.urls')),
-]
+] + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT) #fazer com q seja possivel ver imagens
+                                                                    #no banco  em admin
