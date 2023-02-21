@@ -5,5 +5,5 @@ from .models import *
 
 #none login admin/:
 #flaviano, senha: qwerty
-admin.site.register(categoria)
-admin.site.register(produto)
+admin.site.register(Categoria)
+admin.site.register(Produto)

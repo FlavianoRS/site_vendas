@@ -1,11 +1,20 @@
 {%load static%}
+<!DOCTYPE html>
 <html>
-    <head>
-        <link href="{% static 'mostrarProdutos/css/mostrarProduto.css'%}" rel="stylesheet">
-    </head>
-
-    <body>
-        <div class="teste">testantos</div>
-    </body>
+  <head>
+    <link rel="stylesheet" type="text/css" hrerf="{% static 'mostarProdutos/mostarProduto.css' %}">
+    <title>Produtos</title>
+  </head>
+  <body>
     
+    <div class="div-produ">
+      {% for prodd in produtos%}
+        <h1>{{prodd.nome}}</h1>
+        <img width="100px" src="{{prodd.img.url}}" alt="{{prodd.nome}}">
+        <p>{{prodd.descricao}}</p>
+        <p>Preço: R$ {{prodd.preco}}</p>
+        <button>Comprar</button>
+      {% endfor %}
+    </div>
+  </body>
 </html>
