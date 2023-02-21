@@ -6,15 +6,16 @@
     <title>Produtos</title>
   </head>
   <body>
-    
-    <div class="div-produ">
-      {% for prodd in produtos%}
-        <h1>{{prodd.nome}}</h1>
-        <img width="100px" src="{{prodd.img.url}}" alt="{{prodd.nome}}">
-        <p>{{prodd.descricao}}</p>
-        <p>Preço: R$ {{prodd.preco}}</p>
-        <button>Comprar</button>
-      {% endfor %}
+    <div> 
+      <div class="div-produ">
+        {% for prodd in produtos%}
+          <h1>{{prodd.nome}}</h1>
+          <img width="100px" src="{{prodd.img.url}}" alt="{{prodd.nome}}">
+          <p>{{prodd.descricao}}</p>
+          <p>Preço: R$ {{prodd.preco}}</p>
+          <button>Adicionar ao Carrrinho</button>
+        {% endfor %}
+      </div>
     </div>
   </body>
 </html>

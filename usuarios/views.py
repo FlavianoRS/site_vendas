@@ -10,6 +10,12 @@ def cadastro(request):
         senha = request.POST.get('senha')
         confirSenha = request.POST.get('confirSenha')
         
-        return HttpResponse(f'Nome: {nome}\n Email:{email}\n Senha:{senha}')
+        if senha == confirSenha:
+            user = User.objects.create_user(username=nome, email=email, password=senha,)
+            return HttpResponse(f'Nome: {nome}\n Email:{email}\n Senha:{senha}')
+        else:
+            return(request, 'login.html')
+        
+        
     else:
         return render(request, 'login.html')
